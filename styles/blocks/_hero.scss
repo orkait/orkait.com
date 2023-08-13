@@ -1,0 +1,102 @@
+.hero {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+
+    background-color: black;
+
+	width: 100%;
+	height: 100%;
+    min-height: 80vh;
+
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: $HERO_BG;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-bottom-right-radius: 10%;
+
+		filter: grayscale(80%);
+		z-index: -1;
+	}
+
+	h1 {
+		@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@300&family=Poppins:wght@800&display=swap");
+		font-family: "Poppins", Sans-serif;
+		// font-size: 3em;
+		font-weight: bolder;
+		color: $white;
+	}
+
+	p {
+        margin: 20px 0;
+		font-size: 1em;
+		font-weight: normal;
+		color: $white;
+	}
+
+	@include tablet {
+		h1 {
+			font-size: 3em;
+		}
+
+		p {
+			font-size: 1.5em;
+		}
+	}
+
+	@include laptop {
+		justify-content: flex-start;
+
+		h1 {
+			font-size: 3em;
+		}
+
+		p {
+			font-size: 1.3em;
+		}
+	}
+
+	@include desktop {
+		h1 {
+			font-size: 4em;
+		}
+
+		p {
+			font-size: 1.5em;
+		}
+	}
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+
+	&-inner {
+		span {
+			display: block;
+		}
+
+		max-width: 800px;
+		max-height: 800px;
+		line-height: 1;
+	}
+
+	@include laptop {
+		margin-left: 100px;
+	}
+
+	@include desktop {
+		margin-left: 150px;
+	}
+}

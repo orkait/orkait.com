@@ -1,0 +1,28 @@
+// importing helpers
+@import "./helpers/variable";
+@import "./helpers/mixins";
+@import "./helpers/functions";
+@import "./helpers/mediaqueries";
+@import "./helpers/normalize";
+
+
+// importing base
+@import "./base/base";
+@import "./base/images";
+
+// importing blocks
+@import "./blocks/footer";
+@import "./blocks/hero";
+@import "./blocks/header";
+@import "./blocks/info";
+@import "./blocks/navbar";
+@import "./blocks/timeline";
+@import "./blocks/services";
+@import "./blocks/contact";
+
+// importing components
+@import "./components/button";
+@import "./components/card";
+
+// importing effects
+@import "./helpers/effects";

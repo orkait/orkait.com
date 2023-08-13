@@ -1,0 +1,146 @@
+$COLOR: shade(white, 1%);
+
+.navbar__wrapper {
+	display: flex;
+	box-shadow: $shadow_200;
+	flex-direction: column;
+	width: 100%;
+
+	@include tablet {
+		flex: 2;
+
+		width: auto;
+		padding-left: 50px;
+		padding-right: 50px;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.navbar-block {
+	width: 100%;
+	box-shadow: $shadow_200;
+	background-color: $COLOR;
+}
+
+.navbar {
+	display: flex;
+    flex-direction: column;
+	padding: 0 30px !important;
+
+
+    @include tablet{
+        flex-direction: row;
+    }
+}
+
+.navbar__items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+
+	@include tablet {
+		flex: 8;
+
+		flex-direction: row;
+		margin: 10px;
+	}
+}
+
+.navbar__item {
+	// background-color: $white;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 50px;
+	width: 100%;
+
+	font-weight: bold;
+	color: $black;
+
+	// margin: 10px;
+	padding: 10px;
+
+	cursor: pointer;
+	text-align: center;
+	font-size: 1em;
+	transition: background-color 0.5s ease;
+	box-sizing: border-box;
+
+	&__about {
+		border: none;
+	}
+
+	&:visited {
+		color: red;
+		background-color: pink;
+	}
+
+	@include tablet {
+		max-width: 100px;
+        transition: all 1s ease;
+		
+
+		&:hover::after {
+			width: 100%;
+			height: 5px;
+			content: "";
+			background-color: red;
+			border-bottom: 3px solid $black;
+		}
+
+		margin: 10px;
+	}
+}
+
+.navbar__action {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5px 10px;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		transition: all 0.5s ease-out;
+
+		img {
+			max-height: 80px;
+
+			@include tablet {
+				max-height: 100px;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+			transform: scale(1);
+			transition: all 0.3s ease-in;
+		}
+	}
+
+	&__hamburger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 1px solid $purple;
+		padding: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		width: 50px;
+		height: 50px;
+	}
+
+	@include tablet {
+		margin: 10px 10px;
+		&__hamburger {
+			display: none;
+		}
+	}
+}
