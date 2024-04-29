@@ -3,17 +3,17 @@ import Image from 'next/image'
 
 const visonariesData = [
     {
-        name: 'Kailas Mahavarkar',
-        title: 'Software Engineer at Carwale',
+        name: 'John Wick',
+        title: 'Software Engineer',
         image: '/assets/orka_black.svg'
     },
     {
-        name: 'Kamal Maharana',
-        title: 'Senior Software Engineer at PineLabs',
+        name: 'John Wick',
+        title: 'Software Engineer',
         image: '/assets/orka_black.svg'
     },
     {
-        name: 'Shubham Mandwale',
+        name: 'John Wick',
         title: 'Data Analyst',
         image: '/assets/orka_black.svg'
     },

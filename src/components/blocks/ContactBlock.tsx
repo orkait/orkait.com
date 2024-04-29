@@ -8,8 +8,7 @@ const contactTab = [
         title: "Contact Number",
         desription: (
             <>
-                <p>+91 9920962195</p>
-                <p>+91 8879103503</p>
+       
             </>
         ),
     },

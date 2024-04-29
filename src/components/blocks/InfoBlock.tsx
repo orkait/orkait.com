@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faClock } from "@fortawesome/free-solid-svg-icons";
-import CardGroup from "../tools/CardGroup";
-import { infoCardData } from "../../data/infocard.data";
 import React from "react";
 
 const InfoBlock = () => {
@@ -29,9 +27,6 @@ const InfoBlock = () => {
                     <FontAwesomeIcon icon={faArrowRight} />
                 </div>
             </div>
-            <div className="divider" />
-            <CardGroup
-                data={infoCardData} />
         </div>
     );
 };

@@ -14,7 +14,7 @@ const CardGroup = ({
     cardClassName?: string,
 }) => {
     return (
-        <div className="flex max-w-full flex-wrap  items-center justify-center">
+        <div className="flex mt-5 max-w-full flex-wrap  items-center justify-center">
             {data.map((x, index) => (
                 <>
                     <Card

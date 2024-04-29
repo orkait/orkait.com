@@ -5,6 +5,7 @@ import TimeLineBlock from "@/components/blocks/TimeLineBlock";
 import ServiceBlock from "@/components/blocks/ServiceBlock";
 import ContactBlock from "@/components/blocks/ContactBlock";
 import Visionaries from "@/components/blocks/Visionaries";
+import PromiseBlock from "@/components/blocks/PromiseBlock";
 
 const MainBlock = () => {
     return (
@@ -13,6 +14,8 @@ const MainBlock = () => {
             <div className="divider" />
             <div className="divider" />
             <InfoBlock />
+            <div className="divider" />
+            <PromiseBlock />
             <div className="divider" />
             <TimeLineBlock />
             <div className="divider" />
