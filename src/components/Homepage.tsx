@@ -6,10 +6,11 @@ import ServiceBlock from "@/components/blocks/ServiceBlock";
 import ContactBlock from "@/components/blocks/ContactBlock";
 import Visionaries from "@/components/blocks/Visionaries";
 import PromiseBlock from "@/components/blocks/PromiseBlock";
+import { OFFLINE_MODE } from "@/env";
 
 const MainBlock = () => {
     return (
-        <div >
+        <div>
             <HeroBlock />
             <div className="divider" />
             <div className="divider" />
