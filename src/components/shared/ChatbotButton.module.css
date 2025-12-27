@@ -1,0 +1,38 @@
+.chatbotButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.chatbotButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.chatbotButton:active {
+  transform: translateY(0);
+}
+
+.chatbotButton svg {
+  flex-shrink: 0;
+}
+
+.chatbotText {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .chatbotText {
+    display: inline;
+  }
+}
+

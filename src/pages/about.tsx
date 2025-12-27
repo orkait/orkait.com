@@ -1,14 +1,25 @@
-import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import AboutPage from "../about/AboutPage";
+import React, {useEffect} from "react"
+// import ReactGA from "react-ga4"
+import Layout from "@theme/Layout"
+import {useLocation} from "@docusaurus/router"
 
-export default function About() {
-	return (
-		<>
-			<Header />
-			<AboutPage />
-			<Footer />
-		</>
-	);
+import AboutPage from "../components/about"
+import {PageDescription, PageTitle} from "../constants/titles"
+
+const About = () => {
+  const location = useLocation()
+
+  useEffect(() => {
+    // Tracking disabled
+    // ReactGA.send({hitType: "pageview", page: location.pathname, title: "About Page"})
+  }, [])
+
+  return (
+    <Layout title={PageTitle.ABOUT} description={PageDescription.ABOUT}>
+      <AboutPage />
+    </Layout>
+  )
 }
+
+export default About
+
