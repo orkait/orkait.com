@@ -1,0 +1,50 @@
+[build]
+  # Build command - using npm (Netlify doesn't natively support bun)
+  # If you want to use bun, install it in the build command or use a build plugin
+  command = "npm run build"
+  # Directory to publish (Docusaurus outputs to 'build' directory)
+  publish = "build"
+  # Node version (Netlify will use this)
+  environment = { NODE_VERSION = "18" }
+
+# Alternative: To use bun, uncomment the build plugin below and change command to "bun run build"
+# [[plugins]]
+#   package = "@netlify/plugin-bun"
+
+# Redirect rules for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache static assets
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
