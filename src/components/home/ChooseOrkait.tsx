@@ -2,7 +2,7 @@ import React from "react"
 import { chooseorkait, Theme } from "@site/src/constants"
 import LinkButton from "../shared/LinkButton"
 
-const Chooseorkait = () => {
+const ChooseOrkait = () => {
     return (
         <div className="flex flex-col items-center justify-center">
             <p className="text-title-large max-w-lg mx-auto sm:text-display-tiny lg:text-display-medium text-center my-SPACE_14 sm:mb-SPACE_16 sm:my-32 lg:mt-44">
@@ -36,4 +36,4 @@ const Chooseorkait = () => {
     )
 }
 
-export default Chooseorkait
+export default ChooseOrkait

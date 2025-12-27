@@ -191,7 +191,7 @@ export const socials: Array<Social & {redirection_url?: string}> = [
     },
 ]
 
-export const chooseorkait: Chooseorkait[] = [
+export const chooseorkait: ChooseOrkait[] = [
     {
         id: 1,
         title: "Expert Development",

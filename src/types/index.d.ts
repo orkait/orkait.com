@@ -25,7 +25,7 @@ type Social = {
   redirection_url?: string
 }
 
-type Chooseorkait = {
+type ChooseOrkait = {
   id: number
   title: string
   description: string

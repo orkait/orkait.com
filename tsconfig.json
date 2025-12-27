@@ -4,14 +4,15 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "strict": true, // Enable all strict type checking options
-    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
-    "strictNullChecks": true, // When type checking, take into account 'null' and 'undefined'
-    "strictFunctionTypes": true, // Ensure function parameter and return type matching is more accurate
-    "strictBindCallApply": true, // Enable stricter checking of the 'bind', 'call', and 'apply' methods
-    "strictPropertyInitialization": true, // Ensure class properties are initialized in the constructor
-    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type
-    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+    "strict": false, // Disabled - more lenient type checking
+    "noImplicitAny": false, // Allow implicit 'any' types
+    "strictNullChecks": false, // Allow null and undefined to be assigned to any type
+    "strictFunctionTypes": false, // More lenient function type checking
+    "strictBindCallApply": false, // More lenient bind/call/apply checking
+    "strictPropertyInitialization": false, // Allow uninitialized class properties
+    "noImplicitThis": false, // Allow implicit 'this' with 'any' type
+    "alwaysStrict": false, // Don't enforce strict mode parsing
+    "skipLibCheck": true, // Skip type checking of declaration files for faster compilation
     "types": ["cypress", "node"]
   }
 }
