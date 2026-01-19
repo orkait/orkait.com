@@ -1,3 +1,4 @@
+import "dotenv/config"
 import {themes as prismThemes} from "prism-react-renderer"
 import type * as Preset from "@docusaurus/preset-classic"
 import prismTheme from "./src/theme/CodeBlock/theme"
@@ -12,6 +13,9 @@ export default {
   title,
   trailingSlash: true,
   tagline: "we craft digital experience that inspire",
+  customFields: {
+    siteOffline: process.env.SITE_OFFLINE === "true",
+  },
   headTags: [
     {
       tagName: "script",
